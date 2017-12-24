@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.satya.converter.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="360dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Converter Application"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="380dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/editText9"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/h1"
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ConvertFrom:" />
+
+                <RadioGroup
+                    android:layout_width="340dp"
+                    android:layout_height="285dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbFromMile"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="mile" />
+
+                    <RadioButton
+                        android:id="@+id/rbFromKm"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:text="km" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/h2"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/linearLayout"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ConvertTo:" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbToMile"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="mile" />
+
+                <RadioButton
+                    android:id="@+id/rbToKm"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:text="km" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/h3"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/h2"
+            android:layout_alignStart="@+id/h2"
+            android:layout_below="@+id/h2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:text="Value:" />
+
+            <EditText
+                android:id="@+id/txtVal"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/h4"
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/h3"
+            android:layout_alignStart="@+id/h3"
+            android:layout_below="@+id/h3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:text="Result: " />
+
+            <EditText
+                android:id="@+id/txtResult"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/h5"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/h4"
+            android:layout_alignStart="@+id/h4"
+            android:layout_below="@+id/h4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnConvert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="handleClick"
+                android:text="Convert"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="handleClick"
+                android:text="Reset"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
